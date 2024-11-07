@@ -3,7 +3,8 @@ package UserInterface;
 import UserInterface.Interface.Calender;
 import UserInterface.Interface.ClassRegistration;
 import UserInterface.Interface.StudentRegistration;
-import UserInterface.Interface.Teacher;
+//import UserInterface.Interface.Teacher;
+import UserInterface.Interface.TeacherRegistration;
 
 import javax.swing.*;
 import java.awt.*;
@@ -118,11 +119,13 @@ public class AdminDashboard {
 
         JButton btnTeacher = createStyledButton("TEACHERS", iconTeachers);
         btnTeacher.addActionListener(e -> cardLayout.show(mainPanel, "Teacher"));
+        btnTeachers.addActionListener(e -> cardLayout.show(mainPanel, "Teacher"));
+        TeacherRegistration teacherPanel = new TeacherRegistration();
 
 
         // Class section
         // Load and resize Class icon
-        ImageIcon originalIcon2 = new ImageIcon("Users/Administrator/IdeaProjects/School Management System/src/icons/class .png");
+        ImageIcon originalIcon2 = new ImageIcon("C:/Users/Administrator/IdeaProjects/School Management System/src/icons/class.png");
         ImageIcon iconClasses = resizeIcon(originalIcon2, 75, 75);
         // Create Class button
         JButton btnClass = createStyledButton("CLASSES", iconClasses);
@@ -148,7 +151,7 @@ public class AdminDashboard {
         contentPanel.add(panelContents);
         mainPanel.add(contentPanel, "Home");
         mainPanel.add(studentRegistration, "Student");
-       // mainPanel.add(teacherPanel, "Teacher");
+        mainPanel.add(teacherPanel, "Teacher");
         mainPanel.add(classRegistration, "Class");
         mainPanel.add(calenderPanel, "Calender");
 

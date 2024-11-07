@@ -92,6 +92,7 @@ public class Calender extends JPanel {
             // Handle back button action (e.g., switch to the previous panel)
             CardLayout cardLayout = (CardLayout) getParent().getLayout();
             cardLayout.show(getParent(), "Home");
+
         });
         add(backButton, BorderLayout.SOUTH);
     }
